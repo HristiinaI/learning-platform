@@ -8,10 +8,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 def homepage(request):
-	carusel = Carusel.objects.all()
+	carusels = Carusel.objects.all()
 
 	context = {
-		'carusel': carusel
+		'carusels': carusels
 	}
+	for carusel in carusels:
+		print(carusel.title)
 
-	return render(request, 'template/home.html', context)
+	return render(request, 'pages/home.html', context)
