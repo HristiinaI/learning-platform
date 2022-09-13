@@ -1,0 +1,178 @@
+
+.carousel-container {
+  margin-bottom: 0;
+  z-index: 0;
+
+}
+
+.carousel__page {
+  background-image: linear-gradient(to right, rgb(0,109,170) 40%, rgba(255, 255, 255, 0) 100%);
+  background-size: 180%;
+  background-position: 100%;
+}
+
+.carousel__img {
+  width: 100%;
+  max-height: 800px;
+  min-height: 500px;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+@media only screen and (max-width: 500px) {
+  .carousel__img{
+      min-height: 850px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .carousel__img{
+    min-height: 750px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .carousel__img{
+      min-height: 780px;
+  }
+}
+
+
+.carousel__text-section {
+  max-width: 800px;
+  position: absolute;
+  /* left: calc((100vw - 1280px) / 2); */
+  top: 17rem;
+  color: #ffff;
+}
+@media only screen and (max-width: 1280px) {
+  .carousel__text-section {left: 50px;}
+}
+@media only screen and (max-width: 600px) {
+    .carousel__text-section {top: 15rem;}
+}
+@media only screen and (max-width: 500px) {
+  .carousel__text-section {left: 30px;}
+}
+@media only screen and (max-width:  400px) {
+  .carousel__text-section {  
+    top: 10rem;
+    left: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .carousel__text-section {
+    top: 8rem;
+    left: 12px;
+  }
+}
+
+.accent__title {
+    font-size: 49px;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-family: Merriweather;
+    line-height: 1.4;
+}
+@media only screen and (max-width: 1100px) {
+  .accent__title{font-size: 45px;}
+}
+@media only screen and (max-width: 1000px) {
+  .accent__title{
+    font-size: 40px;
+    max-width: 650px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .accent__title{
+        font-size: 32px;
+        max-width: 500px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .accent__title{
+    font-size: 28px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .accent__title{
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .accent__title{
+    font-size: 22px;
+  }
+}
+
+.basic__paragraph {
+  margin-bottom: 4rem;
+  font-size: 20px;
+  /* @media (max-width: $breakpoint-laptop-m) {
+      max-width: 650px;
+  }
+  @media (max-width: $breakpoint-laptop-s) {
+      max-width: 600px;
+  }
+  @media (max-width: $breakpoint-tablet-l) {
+      max-width: 420px;
+  }
+  @media (max-width: $breakpoint-tablet-s) {
+      max-width: 80%;
+  }
+  @media (max-width: $breakpoint-phone-l) {
+      max-width: 100%;
+    } */
+}
+
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
